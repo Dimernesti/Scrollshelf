@@ -3,7 +3,8 @@ project(Scrollshelf)
 
 set(CMAKE_CXX_STANDARD 17)
 
-find_package(Qt5Core REQUIRED)
 set(SOURCE_FILES src/main.cpp)
+find_package(Qt5Core REQUIRED)
+find_package(Qt5Sql REQUIRED)
 add_executable(${PROJECT_NAME} ${SOURCE_FILES})
-target_link_libraries(${PROJECT_NAME} Qt5::Core)
+target_link_libraries(${PROJECT_NAME} Qt5::Core Qt5::Sql)
